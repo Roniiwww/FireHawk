@@ -36,11 +36,18 @@ export default function License() {
                 </p>
               </div>
               <div className="flex space-x-4">
-                <Button variant="outline" className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10">
+                <Button 
+                  variant="outline" 
+                  className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10"
+                  onClick={() => window.open('https://github.com/Roniiwww/FirehawkRescue', '_blank')}
+                >
                   <Github className="mr-2" size={16} />
                   View on GitHub
                 </Button>
-                <Button className="bg-firehawk-accent hover:bg-red-600 text-white">
+                <Button 
+                  className="bg-firehawk-accent hover:bg-red-600 text-white"
+                  onClick={() => window.open('https://github.com/Roniiwww/FirehawkRescue/archive/refs/heads/main.zip', '_blank')}
+                >
                   <Download className="mr-2" size={16} />
                   Download Source
                 </Button>
