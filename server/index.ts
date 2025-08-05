@@ -6,6 +6,29 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "FireHawkSecret";
+
+app.use("/admin", (req, res, next) => {
+  const auth = req.headers.authorization;
+
+  if (!auth || !auth.startsWith("Basic ")) {
+    res.setHeader("WWW-Authenticate", 'Basic realm="Admin Area"');
+    return res.status(401).send("Unauthorized");
+  }
+
+  const base64Credentials = auth.split(" ")[1];
+  const [username, password] = Buffer.from(base64Credentials, "base64")
+    .toString()
+    .split(":");
+
+  if (username === "admin" && password === ADMIN_PASSWORD) {
+    return next();
+  }
+
+  return res.status(403).send("Forbidden");
+});
+
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
