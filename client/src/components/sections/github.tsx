@@ -64,15 +64,29 @@ export default function GitHub() {
               <div className="text-center space-y-4">
                 <Button 
                   className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-8 py-3 text-lg mr-4"
+                  asChild
                 >
-                  <Github className="mr-2" />
-                  Open Repository
+                  <a 
+                    href="https://github.com/Roniiwww/FirehawkRescue" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-2" />
+                    Open Repository
+                  </a>
                 </Button>
                 <Button 
                   variant="outline"
                   className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10 px-8 py-3 text-lg"
+                  asChild
                 >
-                  Download Source
+                  <a 
+                    href="https://github.com/Roniiwww/FirehawkRescue/archive/refs/heads/main.zip"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Download Source
+                  </a>
                 </Button>
               </div>
             </CardContent>
