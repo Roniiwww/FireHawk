@@ -36,26 +36,33 @@ export default function License() {
                 </p>
               </div>
               <div className="flex space-x-4">
-                <a 
-                  href="https://github.com/Roniiwww/FirehawkRescue" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Button 
+                  variant="outline" 
+                  className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10"
+                  asChild
                 >
-                  <Button variant="outline" className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10">
+                  <a 
+                    href="https://github.com/Roniiwww/FirehawkRescue" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <Github className="mr-2" size={16} />
                     View on GitHub
-                  </Button>
-                </a>
-                <a 
-                  href="https://github.com/Roniiwww/FirehawkRescue/archive/refs/heads/main.zip"
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  </a>
+                </Button>
+                <Button 
+                  className="bg-firehawk-accent hover:bg-red-600 text-white"
+                  asChild
                 >
-                  <Button className="bg-firehawk-accent hover:bg-red-600 text-white">
+                  <a 
+                    href="https://github.com/Roniiwww/FirehawkRescue/archive/refs/heads/main.zip"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <Download className="mr-2" size={16} />
                     Download Source
-                  </Button>
-                </a>
+                  </a>
+                </Button>
               </div>
             </div>
             
