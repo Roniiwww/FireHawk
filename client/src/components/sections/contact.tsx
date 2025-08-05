@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { User, Mail, Github, GraduationCap, Heart, Share } from "lucide-react";
+import { User, Mail, Github, GraduationCap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,46 @@ export default function Contact() {
   });
   
   const { toast } = useToast();
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Failed to send message');
+      }
+      
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your interest in the FireHawk project. Ron will get back to you soon."
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Failed to send message",
+        description: error.message,
+        variant: "destructive"
+      });
+    }
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,19 +71,7 @@ export default function Contact() {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for your interest in the Firehawk project. Ron will get back to you soon."
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
+    contactMutation.mutate(formData);
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -62,7 +91,7 @@ export default function Contact() {
     {
       icon: <Mail className="text-firehawk-success" />,
       title: "Email",
-      value: "ron.osmani@email.com",
+      value: "ronosmani29@gmail.com",
       subtitle: "Best way to reach me"
     },
     {
@@ -112,22 +141,32 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            {/* Call to Action */}
+            {/* Project Status */}
             <Card className="bg-gradient-to-r from-firehawk-accent/20 to-firehawk-success/20 border-firehawk-accent/30">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-4">Support the Mission</h3>
-                <p className="text-firehawk-slate-300 mb-6">
-                  Help bring life-saving drone technology to communities worldwide. Whether you're an engineer, educator, or technology enthusiast, your support can make a difference.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-firehawk-accent hover:bg-blue-600 text-white">
-                    <Heart className="mr-2" size={20} />
-                    Become a Mentor
-                  </Button>
-                  <Button variant="outline" className="border-firehawk-success hover:bg-firehawk-success/10 text-firehawk-success">
-                    <Share className="mr-2" size={20} />
-                    Share Project
-                  </Button>
+                <h3 className="text-2xl font-semibold mb-4">Project Status</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-firehawk-slate-300">Design Phase</span>
+                    <span className="text-firehawk-success font-semibold">Completed</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-firehawk-slate-300">Prototype Development</span>
+                    <span className="text-firehawk-accent font-semibold">In Progress</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-firehawk-slate-300">Flight Testing</span>
+                    <span className="text-firehawk-slate-500 font-semibold">Planned</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-firehawk-slate-300">Production Ready</span>
+                    <span className="text-firehawk-slate-500 font-semibold">Future</span>
+                  </div>
+                </div>
+                <div className="mt-6 pt-4 border-t border-firehawk-slate-700">
+                  <p className="text-sm text-firehawk-slate-400">
+                    Last updated: January 2025
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -172,9 +211,11 @@ export default function Contact() {
                     </SelectTrigger>
                     <SelectContent className="bg-slate-800 border-firehawk-slate-600">
                       <SelectItem value="collaboration">Collaboration Opportunity</SelectItem>
-                      <SelectItem value="mentorship">Mentorship</SelectItem>
-                      <SelectItem value="technical">Technical Question</SelectItem>
-                      <SelectItem value="support">General Support</SelectItem>
+                      <SelectItem value="mentorship">Mentorship & Guidance</SelectItem>
+                      <SelectItem value="technical">Technical Questions</SelectItem>
+                      <SelectItem value="partnership">Partnership Inquiry</SelectItem>
+                      <SelectItem value="feedback">Project Feedback</SelectItem>
+                      <SelectItem value="media">Media & Press</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -195,10 +236,11 @@ export default function Contact() {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-firehawk-accent hover:bg-blue-600 text-white"
+                  disabled={contactMutation.isPending}
+                  className="w-full bg-firehawk-accent hover:bg-blue-600 text-white disabled:opacity-50"
                 >
                   <Mail className="mr-2" size={20} />
-                  Send Message
+                  {contactMutation.isPending ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>

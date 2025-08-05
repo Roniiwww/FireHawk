@@ -24,7 +24,7 @@ export default function Hero() {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-50 to-slate-300 bg-clip-text text-transparent">
-          Firehawk Drone
+          FireHawk
         </h1>
         
         <p className="text-xl md:text-2xl text-firehawk-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">

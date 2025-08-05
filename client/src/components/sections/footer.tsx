@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   const projectLinks = [
-    { label: "About Firehawk", id: "about" },
+    { label: "About FireHawk", id: "about" },
     { label: "Photo Gallery", id: "gallery" },
     { label: "Demo Video", id: "demo" },
     { label: "Source Code", id: "github" }
@@ -25,14 +25,20 @@ export default function Footer() {
     { label: "Project Updates", href: "#" }
   ];
 
+  const legalLinks = [
+    { label: "Privacy Policy", href: "#" },
+    { label: "Terms of Service", href: "#" },
+    { label: "License", href: "#" }
+  ];
+
   return (
     <footer className="bg-slate-900 border-t border-firehawk-slate-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Plane className="text-firehawk-accent text-2xl" />
-              <span className="text-xl font-bold">Firehawk</span>
+              <span className="text-xl font-bold">FireHawk</span>
             </div>
             <p className="text-firehawk-slate-400 text-sm">
               Life-saving drone technology designed by Ron Osmani, an 8th grade student passionate about using innovation to help others.
@@ -80,11 +86,26 @@ export default function Footer() {
               ))}
             </div>
           </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Legal</h4>
+            <div className="space-y-2">
+              {legalLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="block text-firehawk-slate-400 hover:text-firehawk-accent text-sm transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="border-t border-firehawk-slate-800 mt-8 pt-8 text-center">
           <p className="text-firehawk-slate-500 text-sm">
-            © 2024 Firehawk Drone Project by Ron Osmani. Built with passion for saving lives through technology.
+            © 2025 Ron Osmani. FireHawk Drone Project - Built with passion for saving lives through technology.
           </p>
         </div>
       </div>

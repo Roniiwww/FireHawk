@@ -22,7 +22,7 @@ export default function About() {
 
   const specs = [
     { label: "Flight Time", value: "45 minutes" },
-    { label: "Max Range", value: "10 km" },
+    { label: "Max Range", value: "2 km" },
     { label: "Payload Capacity", value: "2 kg" },
     { label: "Camera Resolution", value: "4K Ultra HD" },
     { label: "GPS Accuracy", value: "±1 meter" }
@@ -32,7 +32,7 @@ export default function About() {
     <section id="about" className="py-20 bg-firehawk-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">About Firehawk</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">About FireHawk</h2>
           <p className="text-xl text-firehawk-slate-400 max-w-3xl mx-auto">
             Advanced drone technology designed to save lives through innovative engineering and cutting-edge automation.
           </p>

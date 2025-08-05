@@ -24,7 +24,7 @@ export default function AboutMe() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">About the Creator</h2>
           <p className="text-xl text-firehawk-slate-400 max-w-3xl mx-auto">
-            Meet the young innovator behind the Firehawk drone project.
+            Meet the young innovator behind the FireHawk drone project.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function AboutMe() {
               <p className="text-xl text-firehawk-accent mb-4">8th Grade Student & Innovator</p>
               <p className="text-firehawk-slate-400 text-lg leading-relaxed">
                 At just 14 years old, Ron is passionate about using technology to solve real-world problems. 
-                The Firehawk drone project represents his commitment to making a positive impact through engineering and innovation.
+                The FireHawk drone project represents his commitment to making a positive impact through engineering and innovation.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function AboutMe() {
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold mb-3">Project Goal</h4>
                 <p className="text-firehawk-slate-400">
-                  "I believe technology should be used to help people and save lives. The Firehawk drone is my way of contributing to emergency response and making the world a safer place."
+                  "I believe technology should be used to help people and save lives. The FireHawk drone is my way of contributing to emergency response and making the world a safer place."
                 </p>
               </CardContent>
             </Card>

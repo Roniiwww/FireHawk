@@ -53,7 +53,7 @@ export default function Gallery() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Gallery</h2>
           <p className="text-xl text-firehawk-slate-400 max-w-3xl mx-auto">
-            Explore the Firehawk drone from every angle - design process, prototypes, and testing phases.
+            Explore the FireHawk drone from every angle - design process, prototypes, and testing phases.
           </p>
         </div>
 

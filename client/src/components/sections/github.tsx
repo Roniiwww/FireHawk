@@ -44,9 +44,9 @@ export default function GitHub() {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-semibold mb-4">Firehawk Drone Repository</h3>
+                <h3 className="text-2xl font-semibold mb-4">FireHawk Drone Repository</h3>
                 <p className="text-firehawk-slate-400 mb-6">
-                  Complete source code, documentation, and build instructions for the Firehawk drone project.
+                  Complete source code, documentation, and build instructions for the FireHawk drone project.
                 </p>
                 <div className="bg-slate-800 rounded-lg p-4 mb-6 text-left">
                   <p className="text-sm text-firehawk-slate-400 mb-2">Repository URL (to be updated):</p>
@@ -64,13 +64,18 @@ export default function GitHub() {
                 ))}
               </div>
 
-              <div className="text-center">
+              <div className="text-center space-y-4">
                 <Button 
-                  className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-8 py-3 text-lg"
-                  onClick={() => window.open("https://github.com/ronosmani/firehawk-drone", "_blank")}
+                  className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-8 py-3 text-lg mr-4"
                 >
                   <Github className="mr-2" />
-                  View Repository
+                  Open Repository
+                </Button>
+                <Button 
+                  variant="outline"
+                  className="border-firehawk-accent text-firehawk-accent hover:bg-firehawk-accent/10 px-8 py-3 text-lg"
+                >
+                  Download Source
                 </Button>
               </div>
             </CardContent>

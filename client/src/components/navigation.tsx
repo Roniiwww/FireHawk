@@ -57,7 +57,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <Plane className="text-firehawk-accent text-2xl" />
-            <span className="text-xl font-bold">Firehawk</span>
+            <span className="text-xl font-bold">FireHawk</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

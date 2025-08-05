@@ -26,7 +26,7 @@ export default function Demo() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Demo Video</h2>
           <p className="text-xl text-firehawk-slate-400 max-w-3xl mx-auto">
-            Watch the Firehawk drone in action - from takeoff to mission completion.
+            Watch the FireHawk drone in action - from takeoff to mission completion.
           </p>
         </div>
 
