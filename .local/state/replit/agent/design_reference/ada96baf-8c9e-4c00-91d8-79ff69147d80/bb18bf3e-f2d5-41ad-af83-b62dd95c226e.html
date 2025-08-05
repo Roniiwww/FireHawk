@@ -1,0 +1,670 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firehawk Drone - Life-Saving Technology by Ron Osmani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#0F172A',
+                        'secondary': '#1E293B',
+                        'accent': '#3B82F6',
+                        'success': '#10B981',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-inter bg-primary text-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-helicopter text-accent text-2xl"></i>
+                    <span class="text-xl font-bold">Firehawk</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-300 hover:text-accent transition-colors">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-accent transition-colors">About</a>
+                    <a href="#gallery" class="text-slate-300 hover:text-accent transition-colors">Gallery</a>
+                    <a href="#demo" class="text-slate-300 hover:text-accent transition-colors">Demo</a>
+                    <a href="#github" class="text-slate-300 hover:text-accent transition-colors">GitHub</a>
+                    <a href="#contact" class="text-slate-300 hover:text-accent transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-slate-300"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Background with gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-slate-900"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <i class="fas fa-helicopter text-6xl text-accent mb-6 animate-pulse"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-50 to-slate-300 bg-clip-text text-transparent">
+                Firehawk Drone
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Revolutionary life-saving technology designed by an 8th grade student to make emergency response faster, safer, and more effective.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-accent hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105">
+                    <i class="fas fa-play mr-2"></i>
+                    Watch Demo
+                </button>
+                <button class="border border-slate-500 hover:border-accent text-slate-300 hover:text-accent px-8 py-4 rounded-lg font-semibold text-lg transition-all">
+                    <i class="fab fa-github mr-2"></i>
+                    View Code
+                </button>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="mt-16 p-6 bg-secondary/50 backdrop-blur-sm rounded-2xl border border-slate-700 max-w-4xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-4 text-success">Mission Statement</h2>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    To create an autonomous drone system that can rapidly respond to emergency situations, 
+                    providing critical support in search and rescue operations, medical supply delivery, 
+                    and disaster relief efforts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">About Firehawk</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Advanced drone technology designed to save lives through innovative engineering and cutting-edge automation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-search-location text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Search & Rescue</h3>
+                            <p class="text-slate-400">
+                                Equipped with thermal imaging and GPS tracking to locate missing persons in challenging terrain and weather conditions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-success/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-medical-kit text-success text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Medical Supply Delivery</h3>
+                            <p class="text-slate-400">
+                                Rapid deployment of essential medical supplies to remote or inaccessible areas during emergencies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-fire-extinguisher text-orange-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Disaster Response</h3>
+                            <p class="text-slate-400">
+                                Real-time monitoring and assessment of disaster zones, providing critical data to first responders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+                    <h3 class="text-2xl font-semibold mb-6">Technical Specifications</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-2 border-b border-slate-700">
+                            <span class="text-slate-400">Flight Time</span>
+                            <span class="font-semibold" data-mock="true">45 minutes</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-700">
+                            <span class="text-slate-400">Max Range</span>
+                            <span class="font-semibold" data-mock="true">10 km</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-700">
+                            <span class="text-slate-400">Payload Capacity</span>
+                            <span class="font-semibold" data-mock="true">2 kg</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-700">
+                            <span class="text-slate-400">Camera Resolution</span>
+                            <span class="font-semibold" data-mock="true">4K Ultra HD</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-slate-400">GPS Accuracy</span>
+                            <span class="font-semibold" data-mock="true">±1 meter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Gallery</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Explore the Firehawk drone from every angle - design process, prototypes, and testing phases.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Placeholder for drone images -->
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-camera text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Drone Overview</p>
+                            <p class="text-sm text-slate-500">Upload your drone photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Main Prototype</h3>
+                        <p class="text-sm text-slate-400">Complete drone assembly with all components</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-cogs text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Internal Components</p>
+                            <p class="text-sm text-slate-500">Upload component photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Electronics Bay</h3>
+                        <p class="text-sm text-slate-400">Flight controller and sensor array</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-tools text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Build Process</p>
+                            <p class="text-sm text-slate-500">Upload build photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Assembly Phase</h3>
+                        <p class="text-sm text-slate-400">Construction and testing process</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-rocket text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Test Flight</p>
+                            <p class="text-sm text-slate-500">Upload flight photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">First Flight</h3>
+                        <p class="text-sm text-slate-400">Initial flight testing and calibration</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-eye text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Camera System</p>
+                            <p class="text-sm text-slate-500">Upload camera photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Vision System</h3>
+                        <p class="text-sm text-slate-400">4K camera and thermal imaging setup</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary rounded-xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105" data-mock="true">
+                    <div class="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-blueprint text-4xl text-slate-500 mb-4"></i>
+                            <p class="text-slate-400 font-medium">Design Plans</p>
+                            <p class="text-sm text-slate-500">Upload blueprint photo here</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Engineering Drawings</h3>
+                        <p class="text-sm text-slate-400">Technical specifications and schematics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section id="demo" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Demo Video</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Watch the Firehawk drone in action - from takeoff to mission completion.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+                    <!-- Video placeholder -->
+                    <div class="aspect-video bg-slate-800 rounded-lg flex items-center justify-center mb-6" data-mock="true" data-implementation="Replace with actual video embed">
+                        <div class="text-center">
+                            <i class="fas fa-play-circle text-6xl text-accent mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Demo Video Coming Soon</h3>
+                            <p class="text-slate-400">Upload your demo video link here</p>
+                            <div class="mt-6 space-y-2">
+                                <p class="text-sm text-slate-500">Supported platforms:</p>
+                                <div class="flex justify-center space-x-4">
+                                    <i class="fab fa-youtube text-red-500"></i>
+                                    <i class="fab fa-vimeo text-blue-400"></i>
+                                    <span class="text-slate-500">or direct video file</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video description -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold mb-4">What You'll See</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                            <div class="text-center">
+                                <i class="fas fa-plane-departure text-2xl text-accent mb-3"></i>
+                                <h4 class="font-semibold mb-2">Autonomous Takeoff</h4>
+                                <p class="text-sm text-slate-400">Fully automated flight initialization</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-route text-2xl text-success mb-3"></i>
+                                <h4 class="font-semibold mb-2">Mission Execution</h4>
+                                <p class="text-sm text-slate-400">GPS-guided navigation and task completion</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-plane-arrival text-2xl text-orange-500 mb-3"></i>
+                                <h4 class="font-semibold mb-2">Safe Landing</h4>
+                                <p class="text-sm text-slate-400">Precision landing at designated point</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Open Source</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Explore the code, contribute to the project, and help make life-saving technology accessible to everyone.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-secondary rounded-2xl p-8 border border-slate-700">
+                    <div class="flex items-center justify-center mb-8">
+                        <i class="fab fa-github text-6xl text-slate-300"></i>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">Firehawk Drone Repository</h3>
+                        <p class="text-slate-400 mb-6">
+                            Complete source code, documentation, and build instructions for the Firehawk drone project.
+                        </p>
+                        <div class="bg-slate-800 rounded-lg p-4 mb-6 text-left">
+                            <p class="text-sm text-slate-400 mb-2">Repository URL (to be updated):</p>
+                            <code class="text-accent" data-mock="true">https://github.com/ronosmani/firehawk-drone</code>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <i class="fas fa-code text-2xl text-accent mb-3"></i>
+                            <h4 class="font-semibold mb-2">Flight Control Software</h4>
+                            <p class="text-sm text-slate-400">Arduino/C++ code for drone operation</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-mobile-alt text-2xl text-success mb-3"></i>
+                            <h4 class="font-semibold mb-2">Mobile App</h4>
+                            <p class="text-sm text-slate-400">Ground control station interface</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-file-alt text-2xl text-orange-500 mb-3"></i>
+                            <h4 class="font-semibold mb-2">Documentation</h4>
+                            <p class="text-sm text-slate-400">Build guides and technical specs</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-cube text-2xl text-blue-400 mb-3"></i>
+                            <h4 class="font-semibold mb-2">3D Models</h4>
+                            <p class="text-sm text-slate-400">CAD files for custom components</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center" data-implementation="Link to actual GitHub repository">
+                            <i class="fab fa-github mr-2"></i>
+                            View Repository
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">About the Creator</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Meet the young innovator behind the Firehawk drone project.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <div class="w-48 h-48 bg-gradient-to-br from-accent to-blue-600 rounded-full mx-auto lg:mx-0 mb-8 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-white"></i>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2" data-bind="creator.name">Ron Osmani</h3>
+                        <p class="text-xl text-accent mb-4">8th Grade Student & Innovator</p>
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            At just 14 years old, Ron is passionate about using technology to solve real-world problems. 
+                            The Firehawk drone project represents his commitment to making a positive impact through engineering and innovation.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-slate-800 rounded-lg">
+                            <i class="fas fa-graduation-cap text-2xl text-accent mb-2"></i>
+                            <p class="font-semibold">Grade Level</p>
+                            <p class="text-slate-400">8th Grade</p>
+                        </div>
+                        <div class="text-center p-4 bg-slate-800 rounded-lg">
+                            <i class="fas fa-lightbulb text-2xl text-success mb-2"></i>
+                            <p class="font-semibold">Focus Area</p>
+                            <p class="text-slate-400">Life-Saving Tech</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold">Interests & Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Robotics</span>
+                            <span class="bg-success/20 text-success px-3 py-1 rounded-full text-sm">Programming</span>
+                            <span class="bg-orange-500/20 text-orange-500 px-3 py-1 rounded-full text-sm">3D Printing</span>
+                            <span class="bg-blue-400/20 text-blue-400 px-3 py-1 rounded-full text-sm">Electronics</span>
+                            <span class="bg-purple-500/20 text-purple-500 px-3 py-1 rounded-full text-sm">Engineering Design</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-3">Project Goal</h4>
+                        <p class="text-slate-400">
+                            "I believe technology should be used to help people and save lives. The Firehawk drone is my way of contributing to emergency response and making the world a safer place."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Interested in collaborating, have questions about the project, or want to support the mission? Let's connect!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-secondary rounded-2xl p-8 border border-slate-700">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-user text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Creator</h4>
+                                    <p class="text-slate-400" data-bind="creator.name">Ron Osmani</p>
+                                    <p class="text-sm text-slate-500">8th Grade Student</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-success/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-success"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-slate-400" data-mock="true">ron.osmani@email.com</p>
+                                    <p class="text-sm text-slate-500">Best way to reach me</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-github text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">GitHub</h4>
+                                    <p class="text-slate-400" data-mock="true">@ronosmani</p>
+                                    <p class="text-sm text-slate-500">Follow my coding journey</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-graduation-cap text-orange-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">School Project</h4>
+                                    <p class="text-slate-400">Middle School Innovation</p>
+                                    <p class="text-sm text-slate-500">Part of STEM education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="bg-gradient-to-r from-accent/20 to-success/20 rounded-2xl p-8 border border-accent/30">
+                        <h3 class="text-2xl font-semibold mb-4">Support the Mission</h3>
+                        <p class="text-slate-300 mb-6">
+                            Help bring life-saving drone technology to communities worldwide. Whether you're an engineer, educator, or technology enthusiast, your support can make a difference.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-accent hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center">
+                                <i class="fas fa-heart mr-2"></i>
+                                Become a Mentor
+                            </button>
+                            <button class="border border-success hover:bg-success/10 text-success px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center">
+                                <i class="fas fa-share mr-2"></i>
+                                Share Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-secondary rounded-2xl p-8 border border-slate-700">
+                    <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
+                    <form class="space-y-6" data-implementation="Add form handling logic">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                <option value="">Select a topic</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="mentorship">Mentorship</option>
+                                <option value="technical">Technical Question</option>
+                                <option value="support">General Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-none" placeholder="Tell me about your interest in the Firehawk project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-helicopter text-accent text-2xl"></i>
+                        <span class="text-xl font-bold">Firehawk</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">
+                        Life-saving drone technology designed by Ron Osmani, an 8th grade student passionate about using innovation to help others.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Project Links</h4>
+                    <div class="space-y-2">
+                        <a href="#about" class="block text-slate-400 hover:text-accent text-sm transition-colors">About Firehawk</a>
+                        <a href="#gallery" class="block text-slate-400 hover:text-accent text-sm transition-colors">Photo Gallery</a>
+                        <a href="#demo" class="block text-slate-400 hover:text-accent text-sm transition-colors">Demo Video</a>
+                        <a href="#github" class="block text-slate-400 hover:text-accent text-sm transition-colors">Source Code</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="space-y-2">
+                        <a href="#contact" class="block text-slate-400 hover:text-accent text-sm transition-colors">Get in Touch</a>
+                        <a href="#" class="block text-slate-400 hover:text-accent text-sm transition-colors" data-mock="true">GitHub Profile</a>
+                        <a href="#" class="block text-slate-400 hover:text-accent text-sm transition-colors" data-mock="true">Project Updates</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center">
+                <p class="text-slate-500 text-sm">
+                    © 2024 Firehawk Drone Project by <span data-bind="creator.name">Ron Osmani</span>. Built with passion for saving lives through technology.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        (function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Active navigation highlighting
+        (function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            function updateActiveNav() {
+                const scrollPos = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-accent');
+                            link.classList.add('text-slate-300');
+                            
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.remove('text-slate-300');
+                                link.classList.add('text-accent');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+        })();
+
+        // TODO: Implement form submission handling
+        // TODO: Add image gallery lightbox functionality
+        // TODO: Integrate video player when video URL is provided
+        // TODO: Connect GitHub API for repository stats
+    </script>
+</body>
+</html>
