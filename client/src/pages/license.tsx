@@ -51,7 +51,7 @@ export default function License() {
               <pre className="text-firehawk-slate-300 whitespace-pre-wrap">
 {`MIT License
 
-Copyright (c) 2025 Ron Osmani
+Copyright © 2025 Ron Osmani
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
