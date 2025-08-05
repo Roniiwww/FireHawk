@@ -39,10 +39,7 @@ export default function AboutMe() {
             <div>
               <h3 className="text-3xl font-bold mb-2">Ron Osmani</h3>
               <p className="text-xl text-firehawk-accent mb-4">8th Grade Student & Innovator</p>
-              <p className="text-firehawk-slate-400 text-lg leading-relaxed">
-                At just 14 years old, Ron is passionate about using technology to solve real-world problems. 
-                The FireHawk drone project represents his commitment to making a positive impact through engineering and innovation.
-              </p>
+              <p className="text-firehawk-slate-400 text-lg leading-relaxed">At just 12 years old, Ron is passionate about using technology to solve real-world problems. The FireHawk drone project represents his commitment to making a positive impact through engineering and innovation.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
