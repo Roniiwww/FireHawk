@@ -97,7 +97,7 @@ export default function Contact() {
     {
       icon: <Github className="text-blue-500" />,
       title: "GitHub",
-      value: "@ronosmani",
+      value: "@Roniiwww",
       subtitle: "Follow my coding journey"
     },
     {
@@ -142,29 +142,29 @@ export default function Contact() {
             </Card>
 
             {/* Project Status */}
-            <Card className="bg-gradient-to-r from-firehawk-accent/20 to-firehawk-success/20 border-firehawk-accent/30">
+            <Card className="bg-firehawk-secondary border-firehawk-slate-700">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-4">Project Status</h3>
+                <h3 className="text-2xl font-semibold mb-6">Project Status</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-firehawk-slate-300">Design Phase</span>
+                  <div className="flex justify-between items-center py-2 border-b border-firehawk-slate-700">
+                    <span className="text-firehawk-slate-400">Design Phase</span>
                     <span className="text-firehawk-success font-semibold">Completed</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-firehawk-slate-300">Prototype Development</span>
+                  <div className="flex justify-between items-center py-2 border-b border-firehawk-slate-700">
+                    <span className="text-firehawk-slate-400">Prototype Development</span>
                     <span className="text-firehawk-accent font-semibold">In Progress</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-firehawk-slate-300">Flight Testing</span>
+                  <div className="flex justify-between items-center py-2 border-b border-firehawk-slate-700">
+                    <span className="text-firehawk-slate-400">Flight Testing</span>
                     <span className="text-firehawk-slate-500 font-semibold">Planned</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-firehawk-slate-300">Production Ready</span>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-firehawk-slate-400">Production Ready</span>
                     <span className="text-firehawk-slate-500 font-semibold">Future</span>
                   </div>
                 </div>
                 <div className="mt-6 pt-4 border-t border-firehawk-slate-700">
-                  <p className="text-sm text-firehawk-slate-400">
+                  <p className="text-sm text-firehawk-slate-500">
                     Last updated: January 2025
                   </p>
                 </div>

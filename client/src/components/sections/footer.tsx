@@ -21,7 +21,7 @@ export default function Footer() {
 
   const connectLinks = [
     { label: "Get in Touch", id: "contact" },
-    { label: "GitHub Profile", href: "https://github.com/ronosmani" },
+    { label: "GitHub Profile", href: "https://github.com/Roniiwww" },
     { label: "Project Updates", href: "#" }
   ];
 

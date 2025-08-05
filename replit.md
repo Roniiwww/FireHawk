@@ -7,6 +7,9 @@ This is a full-stack web application showcasing the Firehawk drone project - a l
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+GitHub username: Roniiwww
+Contact email: ronosmani29@gmail.com
+Theme: Fire red and ash grey color scheme
 
 ## System Architecture
 

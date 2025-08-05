@@ -48,10 +48,7 @@ export default function GitHub() {
                 <p className="text-firehawk-slate-400 mb-6">
                   Complete source code, documentation, and build instructions for the FireHawk drone project.
                 </p>
-                <div className="bg-slate-800 rounded-lg p-4 mb-6 text-left">
-                  <p className="text-sm text-firehawk-slate-400 mb-2">Repository URL (to be updated):</p>
-                  <code className="text-firehawk-accent">https://github.com/ronosmani/firehawk-drone</code>
-                </div>
+
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
