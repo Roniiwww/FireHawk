@@ -26,9 +26,9 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "License", href: "#" }
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "License", href: "/license" }
   ];
 
   return (
