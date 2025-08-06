@@ -9,25 +9,38 @@ app.use(express.urlencoded({ extended: false }));
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "FireHawkSecret";
 
 app.use("/admin", (req, res, next) => {
-  const auth = req.headers.authorization;
+  const auth = req.headers.authorization; 
 
   if (!auth || !auth.startsWith("Basic ")) {
     res.setHeader("WWW-Authenticate", 'Basic realm="Admin Area"');
     return res.status(401).send("Unauthorized - please try logging in.");
   }
-
+    
   const base64Credentials = auth.split(" ")[1];
-  const [username, password] = Buffer.from(base64Credentials, "base64")
-    .toString()
+  const [username, password] = Buffer.from(base64Credentials, "base64").toString()
     .split(":");
 
   if (username === "admin" && password === ADMIN_PASSWORD) {
     return next();
   }
-
-    res.setHeader("WWW-Authenticate", 'Basic realm="Admin Area"');
+   
+  res.setHeader("WWW-Authenticate", 'Basic realm="Admin Area"');
   return res.status(401).send("Forbidden — invalid credentials, please try again.");
+});
 
+// Example protected admin route
+app.get("/admin", (req, res) => {
+  res.send("Welcome to the Admin Panel!");
+});
+
+// Example public route
+app.get("/", (req, res) => {
+  res.send("Public homepage!");
+});
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
 
 
